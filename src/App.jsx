@@ -1,22 +1,44 @@
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
-import MainPage from "./FirstPage/MainPage.jsx"
-import RetroPage from "./SecondPage/RetroPage.jsx"
-import './App.css'
-import Contact from './components/Contact.jsx'
-function App() {
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import "./App.css";
+ 
+export default function App() {
+  const [section, setSection] = useState("home");
+  const [transitioning, setTransitioning] = useState(false);
+ 
+  const navigate = (target) => {
+    if (target === section) return;
+    setTransitioning(true);
+    setTimeout(() => {
+      setSection(target);
+      setTransitioning(false);
+    }, 400);
+  };
+ 
+  useEffect(() => {
+    document.title = "Portfolio";
+  }, []);
+ 
+  const renderSection = () => {
+    switch (section) {
+      case "home": return <Home navigate={navigate} />;
+      case "about": return <About />;
+      case "projects": return <Projects />;
+      case "contact": return <Contact />;
+      default: return <Home navigate={navigate} />;
+    }
+  };
  
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<MainPage/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-        </Routes>
-      </BrowserRouter>
-      <Contact/>
-    </>
-  )
+    <div className="app">
+      <Navbar current={section} navigate={navigate} />
+      <main className={`page ${transitioning ? "fade-out" : "fade-in"}`}>
+        {renderSection()}
+      </main>
+    </div>
+  );
 }
- 
-export default App
