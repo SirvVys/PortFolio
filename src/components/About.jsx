@@ -1,11 +1,11 @@
 import "./About.css";
 const BIO_LINES = [
   "Born in 2008 in Lithuania.",
-  "Building things for the web.",
-  "I started with HTML & CSS,",
-  "fell in love with JavaScript,",
-  "and now I'm here — ",
-  "figuring it out one project at a time.",
+  "Lorem ipsum dolor sit amet consectetur.",
+  "Sequi, neque repellat. Nostrum sit neque,",
+  "Et perferendis officia ratione, pariatur.",
+  "Ullam magnam consectetur nobis vero non,",
+  "Explicabo obcaecati repudiandae.",
 ];
  
 const SKILLS = [

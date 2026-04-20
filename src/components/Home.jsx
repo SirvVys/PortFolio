@@ -3,7 +3,7 @@ import "./Home.css";
  
 const TAGLINE = "Developer & Designer";
 const HEADLINE_LINES = ["Building", "things for", "the web."];
-const INTRO = "I craft interfaces that feel alive — where motion, type, and code converge into something worth remembering.";
+const INTRO = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit dolores amet sit et natus fugiat maiores recusandae saepe libero perferendis.";
 const FEATURED_WORKS = [
   { title: "",    year: "", tags: ""},
   { title: "",    year: "", tags: "" },

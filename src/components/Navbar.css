@@ -78,7 +78,7 @@
   letter-spacing: 0.08em;
 }
  
-/* ── Mobile ── */
+
 @media (max-width: 768px) {
   .navbar {
     width: 100%;

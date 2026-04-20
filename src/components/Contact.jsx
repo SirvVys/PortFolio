@@ -18,7 +18,7 @@ export default function Contact() {
  
       <div className="contact__body">
         <p className="contact__intro">
-          Have a question, <br /> or just want to say hello?<br /> my inbox is open.</p>
+          Have a question, or just want to say hello?<br /> my inbox is open.</p>
  
         <a href={`mailto:${EMAIL}`} className="contact__email">
           {EMAIL}

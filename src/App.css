@@ -55,12 +55,10 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   to   { opacity: 0; }
 }
  
-/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
  
-/* ── Responsive ── */
 @media (max-width: 768px) {
   .page { padding-left: 0; padding-top: 70px; }
 }
